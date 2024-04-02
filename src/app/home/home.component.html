@@ -1,0 +1,17 @@
+<!--Data binding 1 : interpolation/Expression {{}}-->
+<h2>{{title}} </h2>
+
+<!--Data binding 2 : property binding []-->
+<img [src]="url" alt="logo Angular" width="200px" height="auto" />
+
+<!--Data binding 3 : event binding ()-->
+<button (click)="changeLogo()" class="btn btn-primary" >Change logo</button>
+
+<!--Data binding 4 : two-way binding [()]-->
+<input type="text" [(ngModel)]="title" />
+
+<app-child [title]="title" (messageEmitter)="showMessage($event)"></app-child>
+
+<ul>
+    <li *ngFor="let p of pays">{{p.nom + " -- " + p.capitale}}</li>
+</ul>
